@@ -1,0 +1,9 @@
+.metada/
+
+.project
+
+.classpath
+
+./Ejercicios/.settings
+./Ejercicios/bin
+./Ejercicios/src/module-info.java

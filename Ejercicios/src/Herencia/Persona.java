@@ -1,17 +1,18 @@
 package Herencia;
-
+/*
+	Crear una clase "Persona" que contenga información básica como 
+	nombre, edad, dirección y método para imprimir su información.
+	Crear dos subclases de "Persona": "Estudiante" y "Profesor". 
+	Ambas deben tener información adicional específica de cada uno, 
+	como la materia que enseña el profesor o el promedio del estudiante.
+*/
 public class Persona {
 	protected String nombre;
-    protected char genero;
     protected int edad;
     protected String direccion;
     //constructor
-    public Persona(String nombre) {
-    	this.nombre=nombre;
-    }
-	public Persona(String nombre, char genero, int edad, String direccion) {
+	public Persona(String nombre, int edad, String direccion) {
 		this.nombre = nombre;
-		this.genero = genero;
 		this.edad = edad;
 		this.direccion = direccion;
 	}
@@ -21,12 +22,6 @@ public class Persona {
 	}
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
-	}
-	public char getGenero() {
-		return genero;
-	}
-	public void setGenero(char genero) {
-		this.genero = genero;
 	}
 	public int getEdad() {
 		return edad;
@@ -43,7 +38,16 @@ public class Persona {
 	//metodo toString
 	@Override
 	public String toString() {
-		return "Persona [nombre=" + nombre + ", genero=" + genero + ", edad=" + edad + ", direccion=" + direccion + "]";
+		StringBuilder builder = new StringBuilder();
+		builder.append("Persona [nombre=");
+		builder.append(this.nombre);
+		builder.append(", edad=");
+		builder.append(this.edad);
+		builder.append(", direccion=");
+		builder.append(this.direccion);
+		builder.append("]");
+		return builder.toString();
 	}
+	
 	
 }
